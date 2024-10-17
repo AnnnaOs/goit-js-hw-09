@@ -90,8 +90,7 @@ function createMarkup(arr) {
     .join('');
 }
 
-new SimpleLightbox('.gallery a', {
-  captions: true,
+const simpleLightbox = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionDelay: 250,
 });
