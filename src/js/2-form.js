@@ -33,7 +33,12 @@ function populateFeedbackForm() {
   const savedUserInfo = JSON.parse(localStorage.getItem(localStorageKey));
 
   if (savedUserInfo) {
-    form.elements.email.value = savedUserInfo.email;
-    form.elements.message.value = savedUserInfo.message;
+    form.elements.email.value = savedUserInfo.email || '';
+    form.elements.message.value = savedUserInfo.message || '';
   }
+
+  // const savedUserInfo = JSON.parse(localStorage.getItem(localStorageKey)) ?? {};
+
+  // form.elements.email.value = savedUserInfo.email || '';
+  // form.elements.message.value = savedUserInfo.message || '';
 }
